@@ -28,7 +28,18 @@ namespace Calculadora
                 a = Convert.ToInt32(txtVariableA.Text);
                 b = int.Parse(txtVariableB.Text);
 
+                if(rdbSuma.Checked)
                 resultado = a + b;
+
+                if(rdbResta.Checked)
+                resultado = a - b;
+
+                if(rdbMultiplicacion.Checked)
+                resultado = a * b;
+
+                if(rdbDivision.Checked)
+                resultado = a / b;
+
                 MessageBox.Show("El resultado de la suma es: " + resultado.ToString(), "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Reset();
 
