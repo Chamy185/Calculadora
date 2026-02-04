@@ -28,127 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            dateTimePicker1 = new DateTimePicker();
-            label1 = new Label();
+            tcMostrar = new TabControl();
+            tpRegistro = new TabPage();
+            tpMostrar = new TabPage();
+            btnRegistar = new Button();
+            txtApellidos = new TextBox();
+            txtNombre = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            tabControl1.SuspendLayout();
-            tabPage2.SuspendLayout();
+            label1 = new Label();
+            dtpRegistro = new DateTimePicker();
+            tcMostrar.SuspendLayout();
+            tpRegistro.SuspendLayout();
             SuspendLayout();
             // 
-            // tabControl1
+            // tcMostrar
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 24);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(765, 396);
-            tabControl1.TabIndex = 0;
+            tcMostrar.Controls.Add(tpRegistro);
+            tcMostrar.Controls.Add(tpMostrar);
+            tcMostrar.Location = new Point(12, 24);
+            tcMostrar.Name = "tcMostrar";
+            tcMostrar.SelectedIndex = 0;
+            tcMostrar.Size = new Size(765, 396);
+            tcMostrar.TabIndex = 0;
             // 
-            // tabPage1
+            // tpRegistro
             // 
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(757, 368);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Registro";
-            tabPage1.UseVisualStyleBackColor = true;
+            tpRegistro.Controls.Add(btnRegistar);
+            tpRegistro.Controls.Add(txtApellidos);
+            tpRegistro.Controls.Add(txtNombre);
+            tpRegistro.Controls.Add(label2);
+            tpRegistro.Controls.Add(label1);
+            tpRegistro.Controls.Add(dtpRegistro);
+            tpRegistro.Location = new Point(4, 24);
+            tpRegistro.Name = "tpRegistro";
+            tpRegistro.Padding = new Padding(3);
+            tpRegistro.Size = new Size(757, 368);
+            tpRegistro.TabIndex = 0;
+            tpRegistro.Text = "Registro";
+            tpRegistro.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tpMostrar
             // 
-            tabPage2.Controls.Add(button1);
-            tabPage2.Controls.Add(textBox2);
-            tabPage2.Controls.Add(textBox1);
-            tabPage2.Controls.Add(label2);
-            tabPage2.Controls.Add(label1);
-            tabPage2.Controls.Add(dateTimePicker1);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(757, 368);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Mostrar";
-            tabPage2.UseVisualStyleBackColor = true;
+            tpMostrar.Location = new Point(4, 24);
+            tpMostrar.Name = "tpMostrar";
+            tpMostrar.Padding = new Padding(3);
+            tpMostrar.Size = new Size(757, 368);
+            tpMostrar.TabIndex = 1;
+            tpMostrar.Text = "Mostrar";
+            tpMostrar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // btnRegistar
             // 
-            dateTimePicker1.Location = new Point(47, 318);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 0;
+            btnRegistar.Location = new Point(549, 234);
+            btnRegistar.Name = "btnRegistar";
+            btnRegistar.Size = new Size(75, 23);
+            btnRegistar.TabIndex = 11;
+            btnRegistar.Text = "Registrar";
+            btnRegistar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // txtApellidos
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(103, 44);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            txtApellidos.Location = new Point(30, 216);
+            txtApellidos.Name = "txtApellidos";
+            txtApellidos.Size = new Size(154, 23);
+            txtApellidos.TabIndex = 10;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(30, 69);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(154, 23);
+            txtNombre.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(108, 168);
+            label2.Location = new Point(30, 161);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Size = new Size(56, 15);
+            label2.TabIndex = 8;
+            label2.Text = "Apellidos";
             // 
-            // textBox1
+            // label1
             // 
-            textBox1.Location = new Point(112, 80);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            label1.AutoSize = true;
+            label1.Location = new Point(30, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Nombre";
+            label1.Click += label1_Click;
             // 
-            // textBox2
+            // dtpRegistro
             // 
-            textBox2.Location = new Point(112, 223);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(544, 222);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 5;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            dtpRegistro.Location = new Point(19, 311);
+            dtpRegistro.Name = "dtpRegistro";
+            dtpRegistro.Size = new Size(233, 23);
+            dtpRegistro.TabIndex = 6;
             // 
             // FrmRegistro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tabControl1);
+            Controls.Add(tcMostrar);
             Name = "FrmRegistro";
             Text = "Registro Alumnos";
-            tabControl1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
+            tcMostrar.ResumeLayout(false);
+            tpRegistro.ResumeLayout(false);
+            tpRegistro.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TabControl tcMostrar;
+        private TabPage tpRegistro;
+        private TabPage tpMostrar;
+        private Button btnRegistar;
+        private TextBox txtApellidos;
+        private TextBox txtNombre;
         private Label label2;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpRegistro;
     }
 }
