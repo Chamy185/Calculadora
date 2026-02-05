@@ -25,10 +25,11 @@ namespace Calculadora
                 ordenado[i] = Convert.ToInt32(dgvDesordenado.Rows[i].Cells[0].Value);
             }
             ordenado = ordenamiento.Burbuja(ordenado);
+            dgvOrdenado.DataSource = ordenado;
 
             for (int i = 0; i < ordenado.Length; i++)
             {
-                dgvOrdenado.Rows.Add(ordenado[i]);
+                dgvOrdenado.Rows[i].Cells[0].Value = ordenado[i];
             }
 
         }
