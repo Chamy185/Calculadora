@@ -39,7 +39,33 @@ namespace Calculadora.Formularios
             {
                 dgvPersonas.DataSource = null;
                 dgvPersonas.DataSource = persona;
+                verificarRegistros();
             }
+        }
+
+        private void tpMostrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void verificarRegistros()
+        {
+            if (persona.Count == 0)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+                btnEliminar.Enabled = true;
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+          persona.RemoveAt(dgvPersonas.CurrentRow.Index);
+            dgvPersonas.DataSource = null; //Limpiar el DataGridView
+            dgvPersonas.DataSource = persona; //Volver a llenar el DataGridView con la lista actualizada
+            verificarRegistros(); //verificar si habilito el boton eliminar
         }
     }
 }
