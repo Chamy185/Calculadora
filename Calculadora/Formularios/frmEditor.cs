@@ -12,7 +12,7 @@ namespace Calculadora.Formularios
     public partial class frmEditor : Form
     {
         bool saved = false; //Variable para verificar si el archivo ha sido guardado o no
-        String path; //Variable para almacenar la ruta del archivo abierto o guardado
+        String path= ""; //Variable para almacenar la ruta del archivo abierto o guardado
         public frmEditor()
         {
             InitializeComponent();
