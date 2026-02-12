@@ -12,7 +12,8 @@ namespace Calculadora.Formularios
     public partial class frmEditor : Form
     {
         bool saved = false; //Variable para verificar si el archivo ha sido guardado o no
-        String path= ""; //Variable para almacenar la ruta del archivo abierto o guardado
+        String path = ""; //Variable para almacenar la ruta del archivo abierto o guardado
+        String texto;
         public frmEditor()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Calculadora.Formularios
 
         private void cToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace Calculadora.Formularios
 
         private void guardarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           Guardar();
+            Guardar();
         }
 
         private void Guardar()
@@ -47,7 +48,7 @@ namespace Calculadora.Formularios
                 path = sfdEditor.FileName;
                 using (StreamWriter archivo = new StreamWriter(path))
                 {
-                    archivo.Write(rtbEditor.Text);
+                    archivo.WriteLine(rtbEditor.Text);
 
                 }
             }
@@ -63,18 +64,36 @@ namespace Calculadora.Formularios
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(saved == false)
+            if (saved == false)
             {
                 Guardar();
                 saved = true;
             }
-            else{
+            else
+            {
                 using (StreamWriter archivo = new StreamWriter(path))
                 {
                     archivo.Write(rtbEditor.Text);
 
                 }
             }
+        }
+
+        private void rtbEditor_TextChanged(object sender, EventArgs e)
+        {
+            texto = rtbEditor.Text;
+            String[] palabras = texto.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+            //tssStatus.Text = $"{palabras.Length} Palabras";
+            tssStatus.Text = palabras.Length.ToString() + " Palabras";
+        }
+
+        private void tssStatus_Click(object sender, EventArgs e)
+        {
+            String[] parrafos = texto.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            String[] palabras = texto.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+
+            MessageBox.Show("Estadisticas: \n\nPalabras: "+ palabras.Length.ToString()+"\nLetras: "+texto.Length.ToString()
+                +"\nParrafos: "+ parrafos.Length.ToString(), "Contador de palabas");
         }
     }
 }
