@@ -39,6 +39,7 @@
             temporizadoresToolStripMenuItem = new ToolStripMenuItem();
             relojToolStripMenuItem = new ToolStripMenuItem();
             editorToolStripMenuItem = new ToolStripMenuItem();
+            contadorToolStripMenuItem = new ToolStripMenuItem();
             mnsPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registroToolStripMenuItem, temporizadoresToolStripMenuItem, editorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registroToolStripMenuItem, temporizadoresToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -111,7 +112,7 @@
             // relojToolStripMenuItem
             // 
             relojToolStripMenuItem.Name = "relojToolStripMenuItem";
-            relojToolStripMenuItem.Size = new Size(100, 22);
+            relojToolStripMenuItem.Size = new Size(180, 22);
             relojToolStripMenuItem.Text = "Reloj";
             relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
             // 
@@ -121,6 +122,13 @@
             editorToolStripMenuItem.Size = new Size(180, 22);
             editorToolStripMenuItem.Text = "Editor";
             editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
+            // 
+            // contadorToolStripMenuItem
+            // 
+            contadorToolStripMenuItem.Name = "contadorToolStripMenuItem";
+            contadorToolStripMenuItem.Size = new Size(180, 22);
+            contadorToolStripMenuItem.Text = "Contador";
+            contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -150,5 +158,6 @@
         private ToolStripMenuItem temporizadoresToolStripMenuItem;
         private ToolStripMenuItem relojToolStripMenuItem;
         private ToolStripMenuItem editorToolStripMenuItem;
+        private ToolStripMenuItem contadorToolStripMenuItem;
     }
 }
